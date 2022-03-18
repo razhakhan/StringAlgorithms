@@ -47,3 +47,26 @@ if __name__ == '__main__':
 
         print(ans)
 # } Driver Code Ends
+
+
+
+"""
+
+Example 1:
+
+Input:
+S = "aaaabbaa"
+Output: aabbaa
+Explanation: The longest Palindromic
+substring is "aabbaa".
+Example 2:
+
+Input: 
+S = "abc"
+Output: a
+Explanation: "a", "b" and "c" are the 
+longest palindromes with same length.
+The result is the one with the least
+starting index.
+
+"""
