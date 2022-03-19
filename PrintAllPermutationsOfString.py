@@ -17,3 +17,14 @@ st="abc"
 arr=list(st)
 n=len(st)
 permutation(arr,0,n)
+
+
+"""
+Alternative approach :
+
+from itertools import *
+S="abc"
+l=["".join(i) for i in list(permutations(S))]
+return sorted(l)
+
+"""
