@@ -39,3 +39,26 @@ if __name__=='__main__':
         print(ob.countPs(input().strip()))
 
 # } Driver Code Ends
+
+"""
+
+Example 1:
+
+Input: 
+Str = "abcd"
+Output: 
+4
+Explanation:
+palindromic subsequence are : "a" ,"b", "c" ,"d"
+ 
+
+Example 2:
+
+Input: 
+Str = "aab"
+Output: 
+4
+Explanation:
+palindromic subsequence are :"a", "a", "b", "aa"
+
+"""
