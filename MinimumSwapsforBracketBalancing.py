@@ -1,5 +1,25 @@
 #User function Template for python3
 '''
+Example 1:
+
+Input  : []][][
+Output : 2
+Explanation :
+First swap: Position 3 and 4
+[][]][
+Second swap: Position 5 and 6
+[][][]
+
+ 
+
+Example 2:
+
+Input : [[][]]
+Output : 0 
+Explanation:
+String is already balanced.
+
+explanation :
 
 str = [ ] ] ] ] [ [ ] [ [ ]
 open stores no of open brackets
