@@ -59,3 +59,32 @@ if __name__ == '__main__':
                 print(1)
         
 # } Driver Code Ends
+
+'''
+
+Algo :
+1. max freq of any element should not be greater than n+1//2, else not possible to make string
+2. start arranging the max freq element in even indices starting from 0
+3. then start arranging any other element in the remaining even indices
+4. if i reached n, make i=1
+5. do this until all elements are covered
+
+Example 1:
+
+Input : str = "geeksforgeeks"
+Output: 1
+Explanation: All the repeated characters of the
+given string can be rearranged so that no 
+adjacent characters in the string is equal.
+Any correct rearrangement will show a output
+of 1.
+
+Example 2:
+
+Input : str = "bbbbb"
+Output: 0
+Explanation: Repeated characters in the string
+cannot be rearranged such that there should not
+be any adjacent repeated character.
+
+'''
