@@ -1,6 +1,4 @@
-from collections import defaultdict
 from sys import maxsize
-MAX_CHARS = 256
 
 class Solution:
     def findSubString(self, s):
@@ -56,3 +54,22 @@ if __name__ == "__main__":
     main()
 
 # } Driver Code Ends
+
+'''
+
+Example 1:
+Input : "AABBBCBBAC"
+Output : 3
+Explanation : Sub-string -> "BAC"
+
+Example 2:
+Input : "aaab"
+Output : 2
+Explanation : Sub-string -> "ab"
+ 
+Example 3:
+Input : "GEEKSGEEKSFOR"
+Output : 8
+Explanation : Sub-string -> "GEEKSFOR"
+
+'''
