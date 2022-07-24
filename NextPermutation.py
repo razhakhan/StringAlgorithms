@@ -1,46 +1,32 @@
-#User function Template for python3
-
 class Solution:
-    def nextPermutation(self, n, a):
+    def nextPermutation(self, a: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        n=len(a)
+        idx=-1
         i=n-1
         while(i>0):
-            if(a[i-1]>=a[i]):
-                i-=1
-            else:
+            if(a[i-1]<a[i]):
+                idx=i       # idx is a fixed no
                 break
-        if(i==0):
-            return a[::-1]
-        else:
-            idx=i       # idx is a fixed no
+            i-=1
+        if(idx==-1):
+            a.reverse()
+        else:    
             prev=idx    # prev is not fixed and will change if a smaller no. is found
             for j in range(idx+1, n):
-                if(a[j]<a[prev] and a[j]>=a[idx-1]):
+                if(a[j]<=a[prev] and a[j]>a[idx-1]):
                     prev=j
-            a[prev], a[idx-1] = a[idx-1], a[prev]
+            a[prev], a[idx-1] = a[idx-1], a[prev]   # 1,2,3,6,5,4 to 1,2,4,6,5,3
             arra=a[:idx]         #1,2,4
             arrb=a[idx:]         #6,5,3
             arrb=arrb[::-1]      #3,5,6
             arra.extend(arrb)    #1,2,4,3,5,6
-            return arra
-
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
-
-if __name__ == '__main__':
-    t = int(input())
-    for _ in range(t):
-        N = int(input())
-        arr = input().split()
-        for i in range(N):
-            arr[i] = int(arr[i])
-        
-        ob = Solution()
-        ans = ob.nextPermutation(N, arr)
-        for i in range(N):
-            print(ans[i],end=" ")
-        print()
-# } Driver Code Ends
+            # or simply instead of last 4 lines arr[idx:]=reversed(arr[idx:])
+            a.clear()
+            for i in arra:
+                a.append(i)
 
 
 """
